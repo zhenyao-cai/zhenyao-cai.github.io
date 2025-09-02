@@ -760,24 +760,23 @@ main {
   transition: background-color 0.2s ease, color 0.2s ease !important;
 }
 
-/* Nuclear option: Override ALL possible button size changes */
-.pub-actions .btn,
-.pub-actions .btn:hover,
-.pub-actions .btn:focus,
-.pub-actions .btn:active,
-.pub-actions .btn:visited,
-.pub-actions .btn:not(:disabled):not(.disabled),
-.pub-actions .btn:not(:disabled):not(.disabled):hover,
-.pub-actions .btn:not(:disabled):not(.disabled):focus,
-.pub-actions .btn:not(:disabled):not(.disabled):active {
-  /* Force exact same dimensions */
-  width: auto !important;
-  height: auto !important;
+/* Universal button styling - works on ALL pages */
+.btn {
+  padding: 0.4rem 0.8rem !important;
+  font-size: 0.75rem !important;
+  line-height: 1.5 !important;
+  border-radius: 0 !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+  /* Prevent any size changes */
+  transform: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  /* Prevent any size changes */
   min-width: auto !important;
   min-height: auto !important;
   max-width: none !important;
   max-height: none !important;
-  /* Prevent any flexbox sizing changes */
+  /* Prevent any hover size changes */
   flex: none !important;
   flex-shrink: 0 !important;
   flex-grow: 0 !important;
@@ -787,7 +786,6 @@ main {
   border-width: 1px !important;
   /* Prevent any font changes */
   font-family: inherit !important;
-  line-height: 1.5 !important;
   /* Prevent any box-sizing changes */
   box-sizing: border-box !important;
 }
@@ -861,6 +859,15 @@ footer {
   margin: 0;
   line-height: 1.6;
   color: var(--gray-dark);
+}
+
+/* Internship Text Styling */
+.internship-text {
+  color: #6B8E23 !important; /* Olive green color */
+}
+
+strong.internship-text {
+  color: #6B8E23 !important; /* Olive green color */
 }
 
 /* Mobile Layout - Sidebar First, Then Main Content */
@@ -975,6 +982,8 @@ footer {
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--gray-light);
 }
+
+
 
 .project-thumb {
   width: 200px;
